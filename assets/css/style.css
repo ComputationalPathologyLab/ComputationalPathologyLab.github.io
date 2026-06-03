@@ -625,6 +625,63 @@ h3 {
   margin-top: 18px;
 }
 
+
+.resource-feature {
+  overflow: hidden;
+  margin: 24px 0 26px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.resource-feature a {
+  display: block;
+}
+
+.resource-feature img {
+  width: 100%;
+  height: auto;
+}
+
+.resource-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.resource-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.resource-preview {
+  display: block;
+  overflow: hidden;
+  margin: 0 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.resource-preview img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.resource-card code,
+.section-header code {
+  padding: 2px 5px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font-size: 0.88em;
+}
+
 @media (min-width: 981px) {
   .hero h1,
   .page-hero h1 {
@@ -709,6 +766,11 @@ h3 {
   .footer-grid {
     grid-template-columns: 1fr;
   }
+
+  .resource-list {
+    grid-template-columns: 1fr;
+  }
+
 
   .section,
   .page-hero,

@@ -42,6 +42,94 @@ function hideFallback(container) {
   if (fallback) fallback.hidden = true;
 }
 
+function escapeHtml(value = "") {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function humanFileSize(bytes = 0) {
+  if (!bytes) return "Size not listed";
+  const units = ["B", "KB", "MB", "GB"];
+  let size = bytes;
+  let unitIndex = 0;
+  while (size >= 1024 && unitIndex < units.length - 1) {
+    size /= 1024;
+    unitIndex += 1;
+  }
+  return `${size.toFixed(size >= 10 || unitIndex === 0 ? 0 : 1)} ${units[unitIndex]}`;
+}
+
+function resourceKind(name = "") {
+  const extension = name.split(".").pop().toLowerCase();
+  if (["png", "jpg", "jpeg", "gif", "webp", "svg"].includes(extension)) return "Image";
+  if (["sh", "py", "R", "r", "ipynb"].includes(extension)) return "Script";
+  if (["md", "txt", "pdf", "docx", "pptx", "xlsx", "csv", "tsv"].includes(extension)) return extension.toUpperCase();
+  return "File";
+}
+
+function isPreviewableImage(name = "") {
+  return ["png", "jpg", "jpeg", "gif", "webp", "svg"].includes(name.split(".").pop().toLowerCase());
+}
+
+async function renderResourceDirectories() {
+  const containers = document.querySelectorAll("[data-render='directory']");
+  if (!containers.length) return;
+
+  await Promise.all(
+    [...containers].map(async (container) => {
+      const directory = container.dataset.directory;
+      const emptyText = container.dataset.empty || "No files have been added yet.";
+      if (!directory) return;
+
+      try {
+        const response = await fetch(
+          `https://api.github.com/repos/ComputationalPathologyLab/ComputationalPathologyLab.github.io/contents/${directory}`
+        );
+        if (!response.ok) {
+          throw new Error(`Could not load ${directory}`);
+        }
+        const entries = await response.json();
+        const files = entries
+          .filter((entry) => entry.type === "file" && !entry.name.startsWith("."))
+          .sort((a, b) => a.name.localeCompare(b.name));
+
+        if (!files.length) {
+          container.innerHTML = `<article class="card"><h3>${escapeHtml(emptyText)}</h3><p>This folder is ready for future public files.</p></article>`;
+          return;
+        }
+
+        container.innerHTML = files
+          .map((file) => {
+            const name = escapeHtml(file.name);
+            const preview = isPreviewableImage(file.name)
+              ? `<a class="resource-preview" href="${file.html_url}"><img src="${file.download_url}" alt="${name}"></a>`
+              : "";
+            return `
+              <article class="resource-card">
+                ${preview}
+                <p class="eyebrow">${resourceKind(file.name)} · ${humanFileSize(file.size)}</p>
+                <h3>${name}</h3>
+                <p class="small"><code>${escapeHtml(directory)}/${name}</code></p>
+                <div class="link-row">
+                  <a href="${file.html_url}">View on GitHub</a>
+                  <a href="${file.download_url}">Download</a>
+                </div>
+              </article>
+            `;
+          })
+          .join("");
+      } catch (error) {
+        console.warn(error);
+        container.innerHTML = `<article class="card"><h3>Could not load ${escapeHtml(directory)}</h3><p>Open the GitHub repository to view this folder directly.</p></article>`;
+      }
+    })
+  );
+}
+
 async function renderMembers() {
   const container = document.querySelector("[data-render='members']");
   if (!container) return;
@@ -194,3 +282,4 @@ renderMembers();
 renderProjects();
 renderPublications();
 renderRepositories();
+renderResourceDirectories();
