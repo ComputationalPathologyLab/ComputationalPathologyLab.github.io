@@ -17,6 +17,15 @@ if (navToggle && siteNav) {
   });
 }
 
+function openExternalLinksInNewTabs(root = document) {
+  root.querySelectorAll('a[href^="http://"], a[href^="https://"]').forEach((link) => {
+    if (link.hostname !== window.location.hostname) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    }
+  });
+}
+
 async function loadJson(file) {
   const response = await fetch(DATA_BASE + file);
   if (!response.ok) {
@@ -152,6 +161,7 @@ async function renderMembers() {
           `
         )
         .join("");
+      openExternalLinksInNewTabs(container);
       return;
     }
     const categories = [...new Set(members.map((member) => member.category))];
@@ -176,6 +186,7 @@ async function renderMembers() {
         return `<section><span class="category-label">${category}</span><div class="grid three">${cards}</div></section>`;
       })
       .join("");
+    openExternalLinksInNewTabs(container);
   } catch (error) {
     console.warn(error);
   }
@@ -206,6 +217,7 @@ async function renderProjects() {
         `
       )
       .join("");
+    openExternalLinksInNewTabs(container);
   } catch (error) {
     console.warn(error);
   }
@@ -244,6 +256,7 @@ async function renderPublications() {
         return `<section><span class="category-label">${group}</span>${items}</section>`;
       })
       .join("");
+    openExternalLinksInNewTabs(container);
   } catch (error) {
     console.warn(error);
   }
@@ -273,11 +286,13 @@ async function renderRepositories() {
         `
       )
       .join("");
+    openExternalLinksInNewTabs(container);
   } catch (error) {
     console.warn(error);
   }
 }
 
+openExternalLinksInNewTabs();
 renderMembers();
 renderProjects();
 renderPublications();
