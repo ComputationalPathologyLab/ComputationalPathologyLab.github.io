@@ -1,0 +1,110 @@
+[
+  {
+    "_comment": "Edit this file to update the team page. Keep valid JSON: use double quotes and no trailing commas.",
+    "category": "Principal Investigator / Team Leader",
+    "name": "Professor Salvatore Lorenzo Renne",
+    "designation": "Team Leader · Associate Professor of Pathological Anatomy",
+    "email": "salvatore.renne@hunimed.eu",
+    "photo": "assets/images/members/salvatore-lorenzo-renne.jpg",
+    "bio": "Professor Salvatore Lorenzo Renne is a pathologist in Anatomia Patologica at Humanitas and Associate Professor of Pathological Anatomy at Humanitas University. His clinical and research profile focuses on mesenchymal tumors, including soft tissue sarcomas and GIST, with interests spanning diagnostic pathology and clinicopathological research.",
+    "interests": ["Pathology", "Digital pathology", "Clinicopathological research"],
+    "links": {
+      "ORCID": "https://orcid.org/0000-0002-0186-1318",
+      "Google Scholar": "https://scholar.google.com/citations?user=Y5QSI2wAAAAJ&hl=en",
+      "PubMed": "https://www.ncbi.nlm.nih.gov/pubmed/?term=renne+sl",
+      "LinkedIn": "#",
+      "Institutional profile": "https://www.humanitas.it/medici/salvatore-lorenzo-renne/"
+    }
+  },
+  {
+    "category": "Postdoctoral Researchers",
+    "name": "Rashid Hussain",
+    "designation": "Postdoctoral Associate",
+    "email": "rashid.bioinfo@gmail.com",
+    "photo": "assets/images/members/rashid-hussain.png",
+    "bio": "Postdoctoral Associate, bioinformatician, and computational chemist at Humanitas Research Hospital in Milan, Italy. Contributes computational biology, workflow development, and data analysis expertise to the lab.",
+    "interests": ["Bioinformatics", "Oncology", "Reproducible workflows"],
+    "links": {
+      "ORCID": "https://orcid.org/0000-0002-6586-7241",
+      "GitHub": "https://github.com/rashid-bioinfo",
+      "Website": "https://rashid-bioinfo.github.io/"
+    }
+  },
+  {
+    "category": "Postdoctoral Researchers",
+    "name": "Dr. Research Fellow",
+    "designation": "Postdoctoral Researcher",
+    "email": "postdoc@example.edu",
+    "photo": "assets/images/members/profile-placeholder.svg",
+    "bio": "Works on quantitative image analysis and interpretable machine learning models for tissue phenotyping.",
+    "interests": ["Image analysis", "Tumor microenvironment", "Biostatistics"],
+    "links": {
+      "ORCID": "#",
+      "Google Scholar": "#",
+      "GitHub": "#"
+    }
+  },
+  {
+    "category": "PhD Students",
+    "name": "PhD Student Name",
+    "designation": "PhD Student",
+    "email": "phd.student@example.edu",
+    "photo": "assets/images/members/profile-placeholder.svg",
+    "bio": "Develops reproducible workflows for imaging mass cytometry and spatial profiling of cancer tissues.",
+    "interests": ["Imaging Mass Cytometry", "Workflow automation", "Spatial statistics"],
+    "links": {
+      "ORCID": "#",
+      "GitHub": "#",
+      "LinkedIn": "#"
+    }
+  },
+  {
+    "category": "MSc Students",
+    "name": "MSc Student Name",
+    "designation": "MSc Student",
+    "email": "msc.student@example.edu",
+    "photo": "assets/images/members/profile-placeholder.svg",
+    "bio": "Contributes to digital pathology experiments, annotation quality control, and exploratory data analysis.",
+    "interests": ["Digital pathology", "Annotation tools", "Data visualization"],
+    "links": {
+      "GitHub": "#",
+      "LinkedIn": "#"
+    }
+  },
+  {
+    "category": "Research Assistants",
+    "name": "Research Assistant Name",
+    "designation": "Research Assistant",
+    "email": "assistant@example.edu",
+    "photo": "assets/images/members/profile-placeholder.svg",
+    "bio": "Supports data curation, pipeline execution, documentation, and reproducible analysis releases.",
+    "interests": ["Data curation", "Open science", "Bioinformatics workflows"],
+    "links": {
+      "GitHub": "#"
+    }
+  },
+  {
+    "category": "Collaborators",
+    "name": "Clinical Collaborator Name",
+    "designation": "Clinical Collaborator",
+    "email": "collaborator@example.edu",
+    "photo": "assets/images/members/profile-placeholder.svg",
+    "bio": "Placeholder collaborator profile for pathology, oncology, immunology, or computational biology partners.",
+    "interests": ["Translational pathology", "Cancer biology", "Clinical validation"],
+    "links": {
+      "Institutional profile": "#"
+    }
+  },
+  {
+    "category": "Alumni",
+    "name": "Alumni Name",
+    "designation": "Former Lab Member",
+    "email": "alumni@example.edu",
+    "photo": "assets/images/members/profile-placeholder.svg",
+    "bio": "Placeholder alumni entry. Update with current role and contribution to the lab.",
+    "interests": ["Computational pathology", "Software development"],
+    "links": {
+      "LinkedIn": "#"
+    }
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "_comment": "Edit this file to update project cards. Valid statuses: ongoing, completed, planned.",
+    "title": "VeSpA: Vessel Spatial Analysis",
+    "description": "Robust, reproducible, and scalable vessel-feature extraction from histological images, including vascular segmentation, morphology, spatial distribution metrics, and links to drug distribution modeling.",
+    "area": "Digital pathology",
+    "status": "ongoing",
+    "members": ["Professor Salvatore Lorenzo Renne", "Rashid Hussain"],
+    "image": "assets/images/projects/vespa-vessel-spatial-analysis.png",
+    "featured": true,
+    "links": {
+      "GitHub": "https://github.com/ComputationalPathologyLab/VeSpA",
+      "Project site": "https://spatialvesselanalysis.github.io/"
+    }
+  },
+  {
+    "title": "Imaging Mass Cytometry Analysis Workflows",
+    "description": "Reusable Imaging Mass Cytometry workflows for channel preparation, panel generation, segmentation, feature extraction, cell phenotyping, and spatial biology analysis.",
+    "area": "Spatial biology",
+    "status": "ongoing",
+    "members": ["Rashid Hussain", "Dr. Research Fellow", "PhD Student Name"],
+    "image": "assets/images/projects/imc-analysis-workflows.png",
+    "featured": true,
+    "links": {
+      "GitHub": "https://github.com/ComputationalPathologyLab/IMC-Data-Analysis",
+      "Workflow": "https://github.com/ComputationalPathologyLab/complete-imc-analysis-workflow"
+    }
+  },
+  {
+    "title": "AI-assisted Tumor Microenvironment Analysis",
+    "description": "Interpretable machine learning approaches for analyzing tumor microenvironment organization, immune neighborhoods, stromal context, vascular patterns, and candidate biomarkers.",
+    "area": "AI biomarker discovery",
+    "status": "planned",
+    "members": ["Professor Salvatore Lorenzo Renne", "Clinical Collaborator Name"],
+    "image": "assets/images/projects/ai-tumor-microenvironment-analysis.png",
+    "featured": true,
+    "links": {
+      "Preprint": "#"
+    }
+  },
+  {
+    "title": "Reproducible Computational Pathology Pipelines",
+    "description": "Nextflow and HPC-ready workflows for transparent, repeatable processing of multiplex imaging and pathology datasets, including Steinbock-based segmentation and feature extraction.",
+    "area": "Reproducible workflows",
+    "status": "ongoing",
+    "members": ["Rashid Hussain", "Research Assistant Name", "PhD Student Name"],
+    "image": "assets/images/projects/reproducible-pathology-pipelines.png",
+    "featured": true,
+    "links": {
+      "GitHub": "https://github.com/ComputationalPathologyLab/imc-nextflow-pipeline",
+      "HPC Tool": "https://github.com/ComputationalPathologyLab/hpc-slurm-job-generator"
+    }
+  },
+  {
+    "title": "Digital Pathology Biomarker Discovery",
+    "description": "Quantitative tissue image analysis for candidate biomarker discovery, with emphasis on morphology, spatial organization, vascular features, and translational cancer hypotheses.",
+    "area": "Translational research",
+    "status": "planned",
+    "members": ["Professor Salvatore Lorenzo Renne", "Dr. Research Fellow"],
+    "image": "assets/images/projects/digital-pathology-biomarker-discovery.png",
+    "featured": false,
+    "links": {
+      "Project page": "#"
+    }
+  }
+]

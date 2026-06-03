@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Profile photo placeholder">
+  <rect width="240" height="240" rx="120" fill="#dceff3"/>
+  <circle cx="120" cy="92" r="42" fill="#0f8b8d"/>
+  <path d="M48 208c11-45 40-70 72-70s61 25 72 70" fill="#0b1f33"/>
+</svg>

@@ -1,0 +1,57 @@
+[
+  {
+    "_comment": "Repository cards are maintained manually for GitHub Pages. Future enhancement: fetch public repositories from the GitHub API at build time.",
+    "name": "VeSpA",
+    "description": "Open-source pipeline for vessel segmentation, morphometric quantification, spatial vessel metrics, and vascular analysis in histological images.",
+    "language": "Python",
+    "topic": "Vessel analysis",
+    "status": "ongoing",
+    "featured": true,
+    "url": "https://github.com/ComputationalPathologyLab/VeSpA"
+  },
+  {
+    "name": "IMC-Data-Analysis",
+    "description": "Imaging Mass Cytometry analysis workflows for segmentation, cell phenotyping, spatial biology, and downstream analysis using R and Python.",
+    "language": "Jupyter Notebook",
+    "topic": "Spatial biology",
+    "status": "ongoing",
+    "featured": true,
+    "url": "https://github.com/ComputationalPathologyLab/IMC-Data-Analysis"
+  },
+  {
+    "name": "imc-nextflow-pipeline",
+    "description": "Reproducible Nextflow pipeline for IMC data processing, channel stacking, panel generation, Steinbock segmentation, and feature extraction.",
+    "language": "Nextflow",
+    "topic": "Workflow automation",
+    "status": "ongoing",
+    "featured": true,
+    "url": "https://github.com/ComputationalPathologyLab/imc-nextflow-pipeline"
+  },
+  {
+    "name": "qupath-vessel-segmentation-plugin",
+    "description": "QuPath plugin for vessel segmentation and annotation generation from images loaded directly in QuPath.",
+    "language": "HTML",
+    "topic": "QuPath",
+    "status": "ongoing",
+    "featured": true,
+    "url": "https://github.com/ComputationalPathologyLab/qupath-vessel-segmentation-plugin"
+  },
+  {
+    "name": "complete-imc-analysis-workflow",
+    "description": "Complete end-to-end Imaging Mass Cytometry workflow for reproducible analysis, phenotyping, and spatial interpretation.",
+    "language": "Jupyter Notebook",
+    "topic": "IMC",
+    "status": "ongoing",
+    "featured": false,
+    "url": "https://github.com/ComputationalPathologyLab/complete-imc-analysis-workflow"
+  },
+  {
+    "name": "hpc-slurm-job-generator",
+    "description": "Python GUI for generating self-contained Slurm scripts to run IMC Steinbock segmentation pipelines on HPC resources.",
+    "language": "Python",
+    "topic": "HPC",
+    "status": "ongoing",
+    "featured": false,
+    "url": "https://github.com/ComputationalPathologyLab/hpc-slurm-job-generator"
+  }
+]

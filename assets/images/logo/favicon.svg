@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Computational Pathology Lab favicon">
+  <rect width="64" height="64" rx="14" fill="#0b1f33"/>
+  <circle cx="22" cy="23" r="8" fill="#0f8b8d"/>
+  <circle cx="42" cy="21" r="6" fill="#56a36c"/>
+  <circle cx="37" cy="43" r="10" fill="#dceff3"/>
+  <path d="M14 44c10-17 22-23 38-26" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+</svg>
